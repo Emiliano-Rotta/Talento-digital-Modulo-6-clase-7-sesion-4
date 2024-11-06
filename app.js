@@ -181,3 +181,26 @@ const fs = require('fs');
 //     }
 // })
 
+
+
+// Callback y Asincronía: Crea una función llamada operacionAsincrona que reciba un número y un callback. La función debe esperar 2 segundos y luego ejecutar el callback pasando como argumento el doble del número recibido.
+
+// Orden de Ejecución: Crea un programa que tenga tres console.log() con mensajes en el siguiente orden:
+// Mensaje inicial
+// Un mensaje intermedio, que se ejecute con un setTimeout de 1 segundo
+// Mensaje final Observa el orden de ejecución en la consola y explica la razón de ese orden.
+
+// Promesas para Control de Errores: Crea una función verificarNumero que devuelva una promesa. La función debe recibir un número y devolver "El número es mayor a 10" si el número es mayor a 10, o un error si no lo es.
+
+// Async/Await en Función de Lectura: Usa fs.promises para crear una función leerArchivoAsync que lea el contenido de un archivo datos.txt y muestre el contenido en la consola. Utiliza try/catch para controlar posibles errores si el archivo no existe.
+
+// Escritura Asincrónica: Crea una función guardarMensaje que guarde un mensaje en un archivo mensaje.txt. Usa una promesa para esperar 1 segundo antes de escribir el mensaje.
+
+// Actualización de Registro: Implementa una función actualizarRegistro que verifique si existe un archivo log.txt. Si existe, añade una línea con el mensaje "Actualización registrada". Si no existe, crea el archivo y escribe "Log inicial". Usa async/await para realizar la tarea.
+
+
+// Transformar Callback en Promesa: Crea una función doblePromesa que reciba un número y devuelva una promesa. La promesa debe devolver el doble del número después de 2 segundos. Luego usa async/await para llamar a esta función y mostrar el resultado.
+
+// Uso de fs con Promesas: Crea una función crearYLeerArchivo que primero cree un archivo saludo.txt con el texto "¡Hola desde Node.js!" y luego lo lea para mostrar el contenido en la consola. Usa fs.promises y async/await para controlar el flujo.
+
+
