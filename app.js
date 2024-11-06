@@ -145,23 +145,39 @@ const fs = require('fs');
 
 // Escritura de un archivo
 
-fs.writeFile('archivo.txt', 'Contenido del archivo', (error) => {
-    if (error) {
-        console.log("Error al escribir el archivo:", error);
-    } else {
-        console.log("Archivo escrito exitosamente.");
-    }
-});
+// fs.writeFile('archivo.txt', 'Contenido del archivo', (error) => {
+//     if (error) {
+//         console.log("Error al escribir el archivo:", error);
+//     } else {
+//         console.log("Archivo escrito exitosamente.");
+//     }
+// });
 
-fs.readFile('archivo.txt', 'utf-8', (error, data) => {
-    if (error) {
-        console.log("Error al leer el archivo:", error);
-    } else {
-        console.log("Contenido del archivo:", data);
-    }
-});
+// fs.readFile('archivo.txt', 'utf-8', (error, data) => {
+//     if (error) {
+//         console.log("Error al leer el archivo:", error);
+//     } else {
+//         console.log("Contenido del archivo:", data);
+//     }
+// });
 
 
 // fs.appendFile(): Agrega contenido al final de un archivo.
-// fs.unlink(): Elimina un archivo.
+// Este método permite agregar datos al final de un archivo de manera asincrónica. Si el archivo no existe, fs.appendFile lo crea automáticamente y luego añade el contenido. Es útil para mantener un registro continuo de datos, como logs, registros de actividad o cualquier información que se actualice de forma acumulativa.
+// fs.appendFile('archivo.txt', 'Nueva línea agregada al registro.', (error) => {
+//     if (error) {
+//         console.log("Error al agregar contenido:", error);
+//     } else {
+//         console.log("Contenido agregado exitosamente.");
+//     }})
+
+// fs.unlink(): Elimina un archivo. Este método elimina un archivo de forma asincrónica. Es ideal para limpiar archivos que ya no son necesarios, gestionar archivos temporales o eliminar datos sensibles.
+
+// fs.unlink('archivo.txt', (error) => {
+//     if (error) {
+//         console.log("Error al eliminar el archivo:", error);
+//     } else {
+//         console.log("Archivo 'archivo.txt' eliminado exitosamente.");
+//     }
+// })
 
