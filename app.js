@@ -266,7 +266,24 @@ guardarMensaje("Este es un mensaje de prueba")
 
 //usamos una funcion async await, porque lo pide el enunciado, pero no es necesario.
 //Lo resuelvo en vivo mañana.
+const fs = require('fs/promises');
 
+// Función actualizarRegistro
+async function actualizarRegistro() {
+
+   // fs.access arrojará un error si el archivo no existe. Usar if...else en lugar de try...catch para este escenario sería menos eficiente, ya que no hay una manera directa de verificar si el archivo existe sin atrapar un posible error.
+  try {
+    await fs.access('log.txt');
+
+    await fs.appendFile('log.txt', 'Actualización registrada\n');
+    console.log('Actualización registrada en log.txt');
+  } catch (error) {
+    
+    await fs.writeFile('log.txt', 'Log inicial\n');
+    console.log('Archivo log.txt creado con "Log inicial"');
+  }
+}
+actualizarRegistro() 
 
 
 // Transformar Callback en Promesa: Crea una función doblePromesa que reciba un número y devuelva una promesa. La promesa debe devolver el doble del número después de 2 segundos. Luego usa async/await para llamar a esta función y mostrar el resultado.
